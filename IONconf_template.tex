@@ -5,7 +5,8 @@
 % folder as the document itself:
 % \documentclass{../sty/IONconf}
 
-
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Common packages to import
 
 % ### MATH PACKAGE
 %\usepackage{amsmath}
@@ -86,25 +87,30 @@
 % http://www.ctan.org/pkg/url
 % Basically, \url{my_url_here}.
 
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Document starts here
 
 \title{ION Conference Paper Draft}
-\author{
-    First~Author, John~Doe\\ \textit{Mystery~University}
-    \and Jane~Doe\\ \textit{Unknown~Institution}
-    }
+
 % Authors are grouped by institution. Institution names are italicized.
-% Author format for an example of three authors, where author 1 and 
+% Author groups are separated by '\vspace{1mm} \\' for a line 
+% break with proper spacing.
+% This template shows an example of three authors, where author 1 and 
 % author 2 are from the same institution:
-% \author{author#1~name, author#2~name\\author#1and#2~institution
-% 	\and author#3~name \\ author#3~institution}
+
+\author{
+    First~Author, John~Doe, \textit{Mystery~University}% <- this '%' removes a trailing whitespace
+    \vspace{1mm} \\%
+    Jane~Doe, \textit{Unknown~Institution}%
+    }
+
 
 \begin{document}
 
 \maketitle
 
-% biography section
+% biography section. The * indicates a section excluded from numbering.
 \section*{biography}
 
 % Biographies are defined as follows:
@@ -116,11 +122,14 @@
 
 \biography{Jane Doe}{biography text goes here (50 words or less).}
 
+
+% The Abstract. The * indicates a section excluded from numbering.
 \section*{Abstract}
 
 Insert abstract here (approximately 300 words).
 
 
+% The introduction. Section numbering starts here.
 \section{Introduction}
 
 This document serves as a \LaTeX  draft for paper submissions to conferences of the Institute of Navigation (ION). It is intended to support and facilitate manuscript preparation for authors.
@@ -130,10 +139,8 @@ This document serves as a \LaTeX  draft for paper submissions to conferences of 
 
 Paper may be broken into sub-sections as desired. Sub-section titles should be initial capitalization only.
 
-Papers submitted for peer review should not exceed the Maximum of 15 Pages. Unlimited page number is allow for papers not being peer reviewed.
-
-Full justify your text. Use automatic hyphenation and check spelling. Digitize or paste down figures.
-
+Papers submitted for peer review should not exceed the Maximum of 15 Pages. Unlimited page number is allow for papers not being peer reviewed.\\
+Full justify your text. Use automatic hyphenation and check spelling. Digitize or paste down figures.\\
 Disclaimers or notes should be placed at the end of the article just prior to references.
 
 \subsection{Use of Figures}
@@ -154,6 +161,7 @@ Incorporate tables and graphs in the body of the text. We encourage you to incor
 \subsection{Use of Tables}
 
 Tables should be centered within the text. Table captions should be centered above the table. Avoid placing tables before their first mention in the text. Identify each table with a bold numeric reference and center it at the top of your table.
+
 
 % % A table adhering to these guidelines is created in this example.
 % \begin{table}[h]
