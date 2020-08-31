@@ -114,25 +114,25 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Preliminary declarations
 
+% base class on article class
 \LoadClass{article}
 
 % require some packages
+
+% to determine the compiler
 \RequirePackage{iftex}
 
-% conditional statements
-\RequirePackage{ifthen}
+% to be able to get rid of page numbers
+\RequirePackage{nopageno}
 
-\RequirePackage{nopageno} % to be able to get rid of page numbers
-% \RequirePackage{mfirstuc} % capitalize words
-% \MFUhyphentrue
-% \MFUnocap{are}
-% \MFUnocap{or}
-% \MFUnocap{a}
-% \MFUnocap{is}
-% \MFUnocap{etc}
-\RequirePackage{geometry} % page layout
+% page layout
+\RequirePackage{geometry}
+
 % for bold table identifiers
 \RequirePackage[font=small, labelfont=bf, tableposition=top]{caption}
+
+% for paragraph spacing and indenting
+\RequirePackage{parskip}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Options
@@ -202,27 +202,26 @@
 % update spacing after equations
 \setlength{\belowdisplayskip}{15pt}
 
+
 % set normal font size to 10
 \renewcommand{\normalsize}{\fontsize{10}{11}\selectfont}
 
 
 % create biography environment
 \newenvironment{biography}[2]{
-    \setlength{\parindent}{0pt}
-    \textbf{#1} #2
-    \setlength{\parindent}{15pt}
+    \textbf{#1} #2%
 }
 
 % define title, section, subsection headings
 \renewcommand{\maketitle}{
     \begin{center}
-        \fontsize{24}{28}\selectfont
-        \textbf{\@title}\par
-        \normalsize
+        \fontsize{24}{28}\selectfont%
+        \textbf{\@title}\par%
+        \normalsize%
         \vskip 3ex%
         \begin{tabular}[t]{c}%
-            \@author
-        \end{tabular}\par
+            \@author%
+        \end{tabular}\par%
     \end{center}
 }
 
