@@ -226,6 +226,14 @@
 }
 
 
+% \renewcommand{\section}{
+%   \@startsection{name}
+%   {level}
+%   {indent}
+%   {beforeskip}
+%   {afterskip}
+%   {style}}
+
 \renewcommand{\section}{%
     \@startsection
     {section}{1}{0pt}{4ex plus -1ex minus -.2ex}%
@@ -244,15 +252,15 @@
     {1ex plus .2ex}{\it\aftergroup\@afterindentfalse}%
 }
 
-\def\thesection{\Roman{section}.}                               % I., II., ...
-\def\thesubsection{\arabic{subsection}.}                        % 1., ...
-\def\thesubsubsection{\alph{subsubsection})}                    % a), ...
+% define basic sections
+\def\thesection{\Roman{section}}                               % I, II, ...
+\def\thesubsection{\arabic{subsection}}                        % 1, ...
+\def\thesubsubsection{\alph{subsubsection})}                   % a), ...
 
-% \renewcommand{\section}{
-%   \@startsection{name}
-%   {level}
-%   {indent}
-%   {beforeskip}
-%   {afterskip}
-%   {style}}
+% add dot to section numbers in headlines
+\def\@seccntformat#1{\csname the#1\endcsname.\quad}
+
+% repair referencing of subsections
+\def\p@subsection{\thesection.}
+\def\p@subsubsection{\thesection.\thesubsection\,}
 
