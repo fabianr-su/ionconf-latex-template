@@ -1,5 +1,5 @@
 %% 
-%% IONconf.cls 2020/07/10 version 0.9
+%% IONconf.cls 2021/01/10 version 1.0
 %% 
 %% LaTeX class file to generate conference papers for the Institute of 
 %% Navigation (ION)
@@ -100,7 +100,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Identification
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{IONconf}[2020/07/10 ION conference paper class]
+\ProvidesClass{IONconf}[2021/01/10 ION conference paper class]
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -258,7 +258,7 @@
 \def\thesubsubsection{\alph{subsubsection})}                   % a), ...
 
 % add dot to section numbers in headlines
-\def\@seccntformat#1{\csname the#1\endcsname.\quad}
+\def\@seccntformat#1{\csname the#1\endcsname.\enskip}
 
 % repair referencing of subsections
 \def\p@subsection{\thesection.}
