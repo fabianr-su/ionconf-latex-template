@@ -1,5 +1,5 @@
 %% 
-%% IONconf.cls 2021/01/10 version 1.0
+%% IONconf.cls 2021/06/10 version 1.1
 %% 
 %% LaTeX class file to generate conference papers for the Institute of 
 %% Navigation (ION)
@@ -56,13 +56,6 @@
 %% File list of work: IONconf.cls, IONconf_HOWTO.pdf, 
 %%                    IONconf_template.tex
 %% 
-%% Major changes to the user interface should be indicated by an 
-%% increase in the version numbers. If a version is a beta, it will 
-%% be indicated with a BETA suffix, i.e., 1.4 BETA.
-%% Small changes can be indicated by appending letters to the version
-%% such as "IEEEtran_v14a.cls".
-%% In all cases, \Providesclass, any \typeout messages to the user.
-%% The changes should also be documented via source comments.
 %%*************************************************************************
 %% 
 %% Available class options (choose one from each category)
@@ -100,7 +93,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Identification
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{IONconf}[2021/01/10 ION conference paper class]
+\ProvidesClass{IONconf}[2021/06/10 ION conference paper class]
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -258,7 +251,12 @@
 \def\thesubsubsection{\alph{subsubsection})}                   % a), ...
 
 % add dot to section numbers in headlines
-\def\@seccntformat#1{\csname the#1\endcsname.\enskip}
+\renewcommand{\@seccntformat}[1]{%
+  \csname the#1\endcsname% Print sectional counter
+  \ifnum\pdfstrcmp{#1}{section}=0 .\fi% If \section, print .
+  \ifnum\pdfstrcmp{#1}{subsection}=0 .\fi% if \subsection, print .
+  \enskip% Space between number and title
+}
 
 % repair referencing of subsections
 \def\p@subsection{\thesection.}
