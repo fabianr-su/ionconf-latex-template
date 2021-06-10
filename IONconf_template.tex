@@ -42,6 +42,9 @@
 % to ensure centered multiline captions, the centering package should 
 % be called as well.
 % \usepackage[justification=centering]{caption}
+% To use the subfigures command, the subcaption package should be 
+% called as well.
+% \usepackage{subcaption}
 % To declare the path(s) where your graphic files are use
 % \graphicspath{{figures/}}
 % To declare their extensions so you won't have to specify these with
@@ -52,6 +55,10 @@
 % installed on most LaTeX systems. The latest version and documentation
 % can be obtained at: 
 % http://www.ctan.org/pkg/graphicx
+% A good introduction to inserting figures in a document can be found 
+% at:
+% https://www.overleaf.com/learn/latex/How_to_Write_a_Thesis_in_
+% 	LaTeX_(Part_3):_Figures,_Subfigures_and_Tables
 % Another good source of documentation is "Using Imported Graphics in
 % LaTeX2e" by Keith Reckdahl which can be found at:
 % http://www.ctan.org/pkg/epslatex
@@ -151,12 +158,12 @@ Incorporate tables and graphs in the body of the text. We encourage you to incor
 % % Graphics are placed like in the following example (where the width should be adjusted depending on the image).
 % \begin{figure}[h]
 % \centering
-% \includegraphics[width=2.5in]{myFigure}
+% \includegraphics[width=2.5in]{IONlogo}
 % % where an .eps filename suffix will be assumed under latex, 
 % % and a .pdf suffix will be assumed for pdflatex; or what has been declared
 % % via \DeclareGraphicsExtensions. Other suffixes like .png are added manually.
 % \caption{The ION turns 75 in 2020.}
-% \label{fig:example}
+% \label{fig:ION}
 % \end{figure}
 
 \subsection{Use of Tables}
@@ -219,6 +226,6 @@ Any acknowledgements should appear just before the references section at the END
 
 % the IEEE bibliography style matches the ION bibliography style guidelines.
 \bibliographystyle{IEEEtran}
-\bibliography{template_bibliography}
+\bibliography{my_bibliography_file}
 
 \end{document}
