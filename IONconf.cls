@@ -5,8 +5,8 @@
 %% Navigation (ION)
 %% 
 %% IONconf.cls is written and maintained by Fabian Rothmaier, Stanford University.
-%% Please contact fabianr@stanford.edu with any questions, error reports and 
-%% suggestions.
+%% Please contact fabianr@alumni.stanford.edu with any questions, error reports 
+%% or suggestions.
 %% 
 %% This class file tries to represent the paper formatting guidelines for ION
 %% conference submissions. For latest guidelines please visit www.ion.org.
@@ -53,7 +53,7 @@
 %% ** Modified files should be clearly indicated as such, including  **
 %% ** renaming them and changing author support contact information. **
 %%
-%% File list of work: IONconf.cls, IONconf_HOWTO.pdf, 
+%% File list of work: IONconf.cls, IONconf_template_userguide.pdf, 
 %%                    IONconf_template.tex
 %% 
 %%*************************************************************************
