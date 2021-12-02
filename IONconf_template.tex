@@ -19,24 +19,6 @@
 
 
 
-% ### CITATION PACKAGE
-%\usepackage{cite}
-% cite.sty was written by Donald Arseneau.
-% Loading the cite package will result in citation numbers being
-% automatically sorted and properly "compressed/ranged". e.g., [1], [9],
-% [2], [7], [5], [6] without using cite.sty will become [1], [2],
-% [5]--[7], [9] using cite.sty.
-% \cite will automatically add leading space, if needed. Use cite.sty's
-% noadjust option (cite.sty V3.8 and later) if you want to turn this off
-% such as if a citation ever needs to be enclosed in parenthesis.
-% cite.sty is already installed on most LaTeX systems. Be sure and use
-% version 5.0 (2009-03-20) and later if using hyperref.sty.
-% The latest version can be obtained at:
-% http://www.ctan.org/pkg/cite
-% The documentation is contained in the cite.sty file itself.
-
-
-
 % ### GRAPHICS PACKAGE
 % \usepackage[pdftex]{graphicx}
 % to ensure centered multiline captions, the centering package should 
@@ -94,6 +76,34 @@
 % systems. The latest version and documentation can be obtained at:
 % http://www.ctan.org/pkg/url
 % Basically, \url{my_url_here}.
+
+
+
+% ### NATBIB PACKAGE
+\usepackage{natbib}
+% The natbib package is a reimplementation of the LATEX \cite
+% command, to work with both author–year and numerical citations.
+% It is compatible with the standard bibliographic style files, such as
+% plain.bst, as well as with those for harvard, apalike, chicago,
+% astron, authordate, and of course natbib.
+% The natbib package enables the apalike bibliography style.
+% See http://homepage.stat.uiowa.edu/~rlenth/ALPHA/apa-tutorial.pdf
+% for an excellent explanation.
+
+
+
+% ### HYPERLINKS PACKAGE
+\usepackage[hidelinks]{hyperref}
+% This package is used to emend cross-referencing commands in LaTeX to
+% produce some sort of \special commands; there are backends for the 
+% special set defined for HyperTeX dvi processors, for embedded pdfmark 
+% commands for processing by Acrobat Distiller (dvips and dvipsone), for
+% dviwindo, for pdfTeX, for dvipdfm, for TeX4ht, and for VTEX's pdf and 
+% HTML backends.
+% Needs to be loaded AFTER other packages as it overwrites many standard 
+% commands.
+% See: https://ctan.org/pkg/hyperref?lang=en
+
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -191,16 +201,8 @@ Tables should be centered within the text. Table captions should be centered abo
 
 \subsection{References}
 
-Only initials of authors' first and middle names are given. If there is more than one initial, there should be a space between them.
-
-\begin{itemize}
-    \item All titles of articles should be within quotation marks. Titles of journals, conference proceedings and books should be italicized
-    \item Spell out all names of journals, proceedings, universities and names of companies.
-    \item Inclusive page numbers should be given for referenced journal articles
-\end{itemize}
-
-In this template, Bibtex is used. The style \verb|\bibliographystyle{IEEEtran}| matches the described format.
-
+In 2021, the ION switched to the APA style reference formatting.
+In this template, the \textit{natbib} package is used together with the style \verb|\bibliographystyle{apalike}|. This matches the ION formatting guidelines very well while using BibTex. Use \verb|\citep{}| and \verb|\citet{}| as desired. \verb|\cite| defaults to \verb|\citet|.
 
 \section{language}
 
@@ -224,8 +226,8 @@ Secure files can cause problems with: opening the document; printing the documen
 
 Any acknowledgements should appear just before the references section at the END of the paper.
 
-% the IEEE bibliography style matches the ION bibliography style guidelines.
-\bibliographystyle{IEEEtran}
+% the apacite bibliography style matches the ION bibliography style guidelines.
+\bibliographystyle{apalike}
 \bibliography{my_bibliography_file}
 
 \end{document}
